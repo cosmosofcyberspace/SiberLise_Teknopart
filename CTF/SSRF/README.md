@@ -47,7 +47,7 @@ Your goal is to retrieve the flag from the internal server (http://127.0.0.1:500
 ## Exploitation
 
 1. Visit http://localhost:5000 in your browser
-2. In the "Image URL" field, enter: http://127.0.0.1:5001/flag.txt
+2. In the "Image URL" field, enter: http://127.0.0.1:5001/flag.txt#.png
 3. Click "Fetch Image"
 4. The application will display the flag in the error message
 
