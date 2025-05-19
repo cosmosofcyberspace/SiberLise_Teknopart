@@ -64,11 +64,7 @@ Bu uygulama, geliştiricilere ve güvenlik uzmanlarına XSS açıklarını test 
 
 
 
-
-
-
-
-
+https://github.com/user-attachments/assets/b9ceb8fc-acad-4157-b82c-0c5c7f6596e0
 
 
 
